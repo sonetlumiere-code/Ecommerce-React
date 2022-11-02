@@ -41,14 +41,13 @@ const Links = [
 ];
 
 const NavLinkComponent = ({ link }) => (
-  <ChakraLink as={RouteLink} to={link.path}
+  <ChakraLink 
+    as={RouteLink} 
+    to={link.path}
     px={2}
     py={1}
     rounded={'md'}
-    _hover={{
-      textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
-    }}
+    _hover={{ textDecoration: 'none', bg: useColorModeValue('gray.200', 'gray.700') }}
   >
     <Text fontSize='m'>{link.name}</Text>
   </ChakraLink>
